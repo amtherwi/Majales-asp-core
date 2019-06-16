@@ -1,2 +1,2 @@
-# Majales-asp-core
-Majales ASP Core
+# Majales-DotNet Core
+Majales DotNet Core
