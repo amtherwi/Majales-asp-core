@@ -9,5 +9,12 @@
         public int ExpireInSeconds { get; set; }
 
         public long UserId { get; set; }
+        
+        public string SureName { get; set; }
+        
+        public string UserName { get; set; }
+        
+        public string emailAddress { get; set; }
+        
     }
 }

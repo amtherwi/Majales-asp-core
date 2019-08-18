@@ -2,6 +2,8 @@
 using Abp.Modules;
 using Abp.Reflection.Extensions;
 using Majales.Authorization;
+using Majales.Majles.DTO;
+using Majales.Models;
 
 namespace Majales
 {
@@ -13,6 +15,13 @@ namespace Majales
         public override void PreInitialize()
         {
             Configuration.Authorization.Providers.Add<MajalesAuthorizationProvider>();
+            Configuration.Modules.AbpAutoMapper().Configurators.Add(config =>
+            {
+                config.CreateMap<CreateMajlesInput, Models.Majles>().ReverseMap();
+                config.CreateMap<Models.Majles, GetMajlesOutput>().ReverseMap();
+                config.CreateMap<UpdateMajlesInput, Models.Majles>().ReverseMap();
+                config.CreateMap<Models.Majles, GetMajlesOutput>().ReverseMap();
+            });
         }
 
         public override void Initialize()
