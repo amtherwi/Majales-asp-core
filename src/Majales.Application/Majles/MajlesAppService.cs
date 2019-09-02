@@ -25,7 +25,7 @@ namespace Majales.Majles
 
         public async Task Create(CreateMajlesInput input)
         {
-            Models.Majles output = Mapper.Map<CreateMajlesInput,  .Majles>(input);
+            Models.Majles output = Mapper.Map<CreateMajlesInput, Models.Majles>(input);
             await _majlesManager.create(output);
         }
 

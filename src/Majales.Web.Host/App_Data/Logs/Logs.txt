@@ -7714,3 +7714,120 @@ DEBUG 2019-08-15 21:33:57,059 [2    ] Abp.Modules.AbpModuleManager             -
 DEBUG 2019-08-15 21:33:57,088 [2    ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
 DEBUG 2019-08-15 21:33:57,089 [2    ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
 DEBUG 2019-08-15 21:33:57,089 [2    ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2019-09-03 00:03:22,596 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2019-09-03 00:03:22,633 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2019-09-03 00:03:22,654 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Majales.Web.Host.Startup.MajalesWebHostModule, Majales.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-03 00:03:22,657 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Majales.MajalesWebCoreModule, Majales.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-03 00:03:22,657 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Majales.MajalesApplicationModule, Majales.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-03 00:03:22,657 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Majales.MajalesCoreModule, Majales.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-03 00:03:22,658 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-03 00:03:22,658 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-03 00:03:22,658 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-03 00:03:22,659 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-03 00:03:22,659 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Majales.EntityFrameworkCore.MajalesEntityFrameworkModule, Majales.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-03 00:03:22,659 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-03 00:03:22,659 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-03 00:03:22,660 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-03 00:03:22,660 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-03 00:03:22,660 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-03 00:03:22,660 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-03 00:03:22,664 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2019-09-03 00:03:22,745 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-09-03 00:03:22,745 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-09-03 00:03:22,745 [1    ] o.Configuration.LanguageManagementConfig - Converted Majales (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-09-03 00:03:22,745 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-09-03 00:03:23,038 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: Majales.EntityFrameworkCore.MajalesDbContext, Majales.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-03 00:03:23,518 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2019-09-03 00:03:23,719 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2019-09-03 00:03:23,993 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2019-09-03 00:03:24,118 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Majales
+DEBUG 2019-09-03 00:03:24,299 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2019-09-03 00:03:24,332 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2019-09-03 00:03:24,382 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 10 classes define auto mapping attributes
+DEBUG 2019-09-03 00:03:24,382 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Majales.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2019-09-03 00:03:24,389 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Majales.Users.Dto.CreateUserDto
+DEBUG 2019-09-03 00:03:24,390 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Majales.Users.Dto.UserDto
+DEBUG 2019-09-03 00:03:24,390 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Majales.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2019-09-03 00:03:24,390 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Majales.Sessions.Dto.UserLoginInfoDto
+DEBUG 2019-09-03 00:03:24,390 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Majales.Roles.Dto.CreateRoleDto
+DEBUG 2019-09-03 00:03:24,391 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Majales.Roles.Dto.PermissionDto
+DEBUG 2019-09-03 00:03:24,391 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Majales.Roles.Dto.RoleDto
+DEBUG 2019-09-03 00:03:24,391 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Majales.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2019-09-03 00:03:24,391 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Majales.MultiTenancy.Dto.TenantDto
+INFO  2019-09-03 00:03:39,281 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/TokenAuth/Authenticate  
+INFO  2019-09-03 00:03:39,313 [12   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-09-03 00:03:39,387 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 110.1374ms 204 
+INFO  2019-09-03 00:03:39,394 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21021/api/TokenAuth/Authenticate application/json;charset=UTF-8 76
+INFO  2019-09-03 00:03:39,395 [12   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-09-03 00:03:40,561 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:21021/api/TokenAuth/Authenticate application/json;charset=UTF-8 76
+INFO  2019-09-03 00:03:40,561 [10   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-09-03 00:03:40,773 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing action Majales.Controllers.TokenAuthController.Authenticate (Majales.Web.Core)
+INFO  2019-09-03 00:03:40,773 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing action Majales.Controllers.TokenAuthController.Authenticate (Majales.Web.Core)
+INFO  2019-09-03 00:03:40,789 [10   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-09-03 00:03:40,789 [12   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-09-03 00:03:41,276 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Majales.Controllers.TokenAuthController.Authenticate (Majales.Web.Core) with arguments (Majales.Models.TokenAuth.AuthenticateModel) - Validation state: Valid
+INFO  2019-09-03 00:03:41,276 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Majales.Controllers.TokenAuthController.Authenticate (Majales.Web.Core) with arguments (Majales.Models.TokenAuth.AuthenticateModel) - Validation state: Valid
+INFO  2019-09-03 00:03:42,186 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Majales.Controllers.TokenAuthController.Authenticate (Majales.Web.Core), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 908.6249ms.
+INFO  2019-09-03 00:03:42,186 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Majales.Controllers.TokenAuthController.Authenticate (Majales.Web.Core), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 908.562ms.
+INFO  2019-09-03 00:03:42,288 [13   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-09-03 00:03:42,288 [6    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-09-03 00:03:42,337 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Majales.Controllers.TokenAuthController.Authenticate (Majales.Web.Core) in 1560.4359ms
+INFO  2019-09-03 00:03:42,337 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Majales.Controllers.TokenAuthController.Authenticate (Majales.Web.Core) in 1560.4538ms
+INFO  2019-09-03 00:03:42,357 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1796.6682ms 200 application/json; charset=utf-8
+INFO  2019-09-03 00:03:42,357 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2962.8838ms 200 application/json; charset=utf-8
+INFO  2019-09-03 00:03:42,361 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/User/Get?id=1  
+INFO  2019-09-03 00:03:42,361 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/User/Get?id=1  
+INFO  2019-09-03 00:03:42,361 [13   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-09-03 00:03:42,361 [6    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-09-03 00:03:42,362 [6    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.3369ms 204 
+INFO  2019-09-03 00:03:42,362 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.3295ms 204 
+INFO  2019-09-03 00:03:42,368 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/User/Get?id=1  
+INFO  2019-09-03 00:03:42,368 [14   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-09-03 00:03:42,419 [14   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-09-03 00:03:42,480 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "Get", controller = "User"}. Executing action Majales.Users.UserAppService.Get (Majales.Application)
+INFO  2019-09-03 00:03:42,480 [13   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-09-03 00:03:42,555 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Majales.Users.UserAppService.Get (Majales.Application) with arguments (Abp.Application.Services.Dto.EntityDto`1[System.Int64]) - Validation state: Valid
+INFO  2019-09-03 00:03:43,018 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Majales.Users.UserAppService.Get (Majales.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 462.9158ms.
+INFO  2019-09-03 00:03:43,051 [10   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-09-03 00:03:43,064 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Majales.Users.UserAppService.Get (Majales.Application) in 583.6326ms
+INFO  2019-09-03 00:03:43,064 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 696.0267ms 200 application/json; charset=utf-8
+INFO  2019-09-03 00:03:43,064 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/User/Get?id=1  
+INFO  2019-09-03 00:03:43,065 [10   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-09-03 00:03:43,065 [10   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-09-03 00:03:43,070 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "Get", controller = "User"}. Executing action Majales.Users.UserAppService.Get (Majales.Application)
+INFO  2019-09-03 00:03:43,070 [10   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-09-03 00:03:43,072 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Majales.Users.UserAppService.Get (Majales.Application) with arguments (Abp.Application.Services.Dto.EntityDto`1[System.Int64]) - Validation state: Valid
+INFO  2019-09-03 00:03:43,087 [6    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Majales.Users.UserAppService.Get (Majales.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 15.0852ms.
+INFO  2019-09-03 00:03:43,101 [10   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-09-03 00:03:43,101 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Majales.Users.UserAppService.Get (Majales.Application) in 31.2868ms
+INFO  2019-09-03 00:03:43,101 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 37.0232ms 200 application/json; charset=utf-8
+INFO  2019-09-03 00:05:05,611 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2019-09-03 00:05:05,611 [10   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-09-03 00:05:05,611 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 0.2146ms 204 
+INFO  2019-09-03 00:05:05,703 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2019-09-03 00:05:05,704 [18   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-09-03 00:05:05,704 [18   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-09-03 00:05:05,720 [18   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing action Majales.Sessions.SessionAppService.GetCurrentLoginInformations (Majales.Application)
+INFO  2019-09-03 00:05:05,720 [18   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-09-03 00:05:05,758 [18   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Majales.Sessions.SessionAppService.GetCurrentLoginInformations (Majales.Application) - Validation state: Valid
+INFO  2019-09-03 00:05:05,803 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Majales.Sessions.SessionAppService.GetCurrentLoginInformations (Majales.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 45.5011ms.
+INFO  2019-09-03 00:05:05,814 [19   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-09-03 00:05:05,832 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Majales.Sessions.SessionAppService.GetCurrentLoginInformations (Majales.Application) in 111.393ms
+INFO  2019-09-03 00:05:05,832 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 128.6492ms 200 application/json; charset=utf-8
+INFO  2019-09-03 00:06:22,057 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2019-09-03 00:06:22,059 [20   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-09-03 00:06:22,059 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1.5303ms 204 
+INFO  2019-09-03 00:06:22,167 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2019-09-03 00:06:22,167 [22   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-09-03 00:06:22,168 [22   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2019-09-03 00:06:22,174 [22   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing action Majales.Sessions.SessionAppService.GetCurrentLoginInformations (Majales.Application)
+INFO  2019-09-03 00:06:22,174 [22   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2019-09-03 00:06:22,179 [22   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Majales.Sessions.SessionAppService.GetCurrentLoginInformations (Majales.Application) - Validation state: Valid
+INFO  2019-09-03 00:06:22,203 [22   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action method Majales.Sessions.SessionAppService.GetCurrentLoginInformations (Majales.Application), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 24.0956ms.
+INFO  2019-09-03 00:06:22,215 [22   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2019-09-03 00:06:22,216 [22   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Majales.Sessions.SessionAppService.GetCurrentLoginInformations (Majales.Application) in 41.4325ms
+INFO  2019-09-03 00:06:22,216 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 49.2731ms 200 application/json; charset=utf-8
+DEBUG 2019-09-03 00:07:30,314 [25   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2019-09-03 00:07:30,315 [25   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2019-09-03 00:07:30,316 [25   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2019-09-03 00:07:30,316 [25   ] Abp.Modules.AbpModuleManager             - Shutting down completed.

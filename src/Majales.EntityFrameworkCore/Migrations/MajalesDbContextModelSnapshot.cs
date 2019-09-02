@@ -1033,7 +1033,435 @@ namespace Majales.Migrations
                     b.ToTable("AbpUsers");
                 });
 
+            modelBuilder.Entity("Majales.Models.Attachment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ContentType")
+                        .HasMaxLength(200);
+
+                    b.Property<DateTime>("CreationTime");
+
+                    b.Property<long?>("CreatorUserId");
+
+                    b.Property<byte[]>("Data");
+
+                    b.Property<long?>("DeleterUserId");
+
+                    b.Property<DateTime?>("DeletionTime");
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<DateTime?>("LastModificationTime");
+
+                    b.Property<long?>("LastModifierUserId");
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(64);
+
+                    b.Property<int>("TopicId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TopicId");
+
+                    b.ToTable("Attachments");
+                });
+
+            modelBuilder.Entity("Majales.Models.Classification", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreationTime");
+
+                    b.Property<long?>("CreatorUserId");
+
+                    b.Property<long?>("DeleterUserId");
+
+                    b.Property<DateTime?>("DeletionTime");
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<DateTime?>("LastModificationTime");
+
+                    b.Property<long?>("LastModifierUserId");
+
+                    b.Property<string>("Type");
+
+                    b.Property<int>("ValueId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ValueId")
+                        .IsUnique();
+
+                    b.ToTable("Classifications");
+                });
+
+            modelBuilder.Entity("Majales.Models.Comment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreationTime");
+
+                    b.Property<long?>("CreatorUserId");
+
+                    b.Property<long?>("DeleterUserId");
+
+                    b.Property<DateTime?>("DeletionTime");
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<DateTime?>("LastModificationTime");
+
+                    b.Property<long?>("LastModifierUserId");
+
+                    b.Property<int>("MemberId");
+
+                    b.Property<int>("TopicId");
+
+                    b.Property<string>("comment");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MemberId");
+
+                    b.HasIndex("TopicId");
+
+                    b.ToTable("Comments");
+                });
+
             modelBuilder.Entity("Majales.Models.Majles", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("ActiveStatus");
+
+                    b.Property<int>("ClassificationId");
+
+                    b.Property<DateTime>("CreationDate");
+
+                    b.Property<DateTime>("CreationTime");
+
+                    b.Property<long?>("CreatorUserId");
+
+                    b.Property<long?>("DeleterUserId");
+
+                    b.Property<DateTime?>("DeletionTime");
+
+                    b.Property<string>("Description")
+                        .IsRequired();
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<DateTime?>("LastModificationTime");
+
+                    b.Property<long?>("LastModifierUserId");
+
+                    b.Property<string>("Owner")
+                        .IsRequired();
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(64);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ClassificationId")
+                        .IsUnique();
+
+                    b.ToTable("Majles");
+                });
+
+            modelBuilder.Entity("Majales.Models.MajlisMembership", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreationTime");
+
+                    b.Property<long?>("CreatorUserId");
+
+                    b.Property<DateTime>("Date");
+
+                    b.Property<long?>("DeleterUserId");
+
+                    b.Property<DateTime?>("DeletionTime");
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<DateTime?>("LastModificationTime");
+
+                    b.Property<long?>("LastModifierUserId");
+
+                    b.Property<int>("MajlesId");
+
+                    b.Property<int>("MemberId");
+
+                    b.Property<int>("RoleId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MajlesId");
+
+                    b.HasIndex("MemberId");
+
+                    b.HasIndex("RoleId")
+                        .IsUnique();
+
+                    b.ToTable("MajlisMembership");
+                });
+
+            modelBuilder.Entity("Majales.Models.Meeting", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("ActiveStatus");
+
+                    b.Property<int>("CEOid");
+
+                    b.Property<DateTime>("CreationTime");
+
+                    b.Property<long?>("CreatorUserId");
+
+                    b.Property<DateTime>("Date");
+
+                    b.Property<long?>("DeleterUserId");
+
+                    b.Property<DateTime?>("DeletionTime");
+
+                    b.Property<string>("Description")
+                        .IsRequired();
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<DateTime?>("LastModificationTime");
+
+                    b.Property<long?>("LastModifierUserId");
+
+                    b.Property<string>("Location");
+
+                    b.Property<int?>("MajlesId");
+
+                    b.Property<DateTime>("MeetingTime");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(64);
+
+                    b.Property<int>("TypeId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MajlesId");
+
+                    b.ToTable("Meetings");
+                });
+
+            modelBuilder.Entity("Majales.Models.MeetingAttendance", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("Attendees");
+
+                    b.Property<DateTime>("CreationTime");
+
+                    b.Property<long?>("CreatorUserId");
+
+                    b.Property<long?>("DeleterUserId");
+
+                    b.Property<DateTime?>("DeletionTime");
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<DateTime?>("LastModificationTime");
+
+                    b.Property<long?>("LastModifierUserId");
+
+                    b.Property<int>("MeetingId");
+
+                    b.Property<int>("Memberid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MeetingId")
+                        .IsUnique();
+
+                    b.HasIndex("Memberid")
+                        .IsUnique();
+
+                    b.ToTable("Attendances");
+                });
+
+            modelBuilder.Entity("Majales.Models.MeetingMinutes", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreationTime");
+
+                    b.Property<long?>("CreatorUserId");
+
+                    b.Property<string>("Decision");
+
+                    b.Property<long?>("DeleterUserId");
+
+                    b.Property<DateTime?>("DeletionTime");
+
+                    b.Property<string>("Descussion");
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<DateTime?>("LastModificationTime");
+
+                    b.Property<long?>("LastModifierUserId");
+
+                    b.Property<int?>("MemberId");
+
+                    b.Property<int>("TopicId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MemberId");
+
+                    b.HasIndex("TopicId");
+
+                    b.ToTable("meeting_Minutes");
+                });
+
+            modelBuilder.Entity("Majales.Models.Member", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("ActiveStatus");
+
+                    b.Property<string>("Avatar");
+
+                    b.Property<string>("College");
+
+                    b.Property<DateTime>("CreationTime");
+
+                    b.Property<long?>("CreatorUserId");
+
+                    b.Property<string>("Degree");
+
+                    b.Property<long?>("DeleterUserId");
+
+                    b.Property<DateTime?>("DeletionTime");
+
+                    b.Property<string>("Department");
+
+                    b.Property<string>("Email");
+
+                    b.Property<DateTime>("EnrolledDate");
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<string>("JobTitle");
+
+                    b.Property<DateTime?>("LastModificationTime");
+
+                    b.Property<long?>("LastModifierUserId");
+
+                    b.Property<string>("Name");
+
+                    b.Property<string>("NationalId");
+
+                    b.Property<string>("Phone");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Members");
+                });
+
+            modelBuilder.Entity("Majales.Models.MembershipRole", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreationTime");
+
+                    b.Property<long?>("CreatorUserId");
+
+                    b.Property<long?>("DeleterUserId");
+
+                    b.Property<DateTime?>("DeletionTime");
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<DateTime?>("LastModificationTime");
+
+                    b.Property<long?>("LastModifierUserId");
+
+                    b.Property<string>("Role")
+                        .IsRequired();
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MembershipRole");
+                });
+
+            modelBuilder.Entity("Majales.Models.Topic", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("ActiveStatus");
+
+                    b.Property<int>("ClassificationId");
+
+                    b.Property<DateTime>("CreationTime");
+
+                    b.Property<long?>("CreatorUserId");
+
+                    b.Property<long?>("DeleterUserId");
+
+                    b.Property<DateTime?>("DeletionTime");
+
+                    b.Property<string>("Description")
+                        .IsRequired();
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<DateTime?>("LastModificationTime");
+
+                    b.Property<long?>("LastModifierUserId");
+
+                    b.Property<int>("MeetingId");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(64);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ClassificationId")
+                        .IsUnique();
+
+                    b.HasIndex("MeetingId");
+
+                    b.ToTable("Topics");
+                });
+
+            modelBuilder.Entity("Majales.Models.TopicClassification", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -1050,9 +1478,37 @@ namespace Majales.Migrations
                     b.Property<string>("Description")
                         .IsRequired();
 
-                    b.Property<string>("DisplayName")
-                        .IsRequired()
-                        .HasMaxLength(64);
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<DateTime?>("LastModificationTime");
+
+                    b.Property<long?>("LastModifierUserId");
+
+                    b.Property<string>("Title")
+                        .IsRequired();
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TopicClassifications");
+                });
+
+            modelBuilder.Entity("Majales.Models.Value", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("CEO_inCost");
+
+                    b.Property<int>("CEO_outCost");
+
+                    b.Property<DateTime>("CreationTime");
+
+                    b.Property<long?>("CreatorUserId");
+
+                    b.Property<long?>("DeleterUserId");
+
+                    b.Property<DateTime?>("DeletionTime");
 
                     b.Property<bool>("IsDeleted");
 
@@ -1060,9 +1516,62 @@ namespace Majales.Migrations
 
                     b.Property<long?>("LastModifierUserId");
 
+                    b.Property<int>("MSec_inCost");
+
+                    b.Property<int>("MSec_outCost");
+
+                    b.Property<int>("Mem_inCost");
+
+                    b.Property<int>("Mem_outCost");
+
+                    b.Property<int>("Sec_inCost");
+
+                    b.Property<int>("Sec_outCost");
+
                     b.HasKey("Id");
 
-                    b.ToTable("Majles");
+                    b.ToTable("Values");
+                });
+
+            modelBuilder.Entity("Majales.Models.Vote", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Answer");
+
+                    b.Property<DateTime>("CreationTime");
+
+                    b.Property<long?>("CreatorUserId");
+
+                    b.Property<long?>("DeleterUserId");
+
+                    b.Property<DateTime?>("DeletionTime");
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<DateTime?>("LastModificationTime");
+
+                    b.Property<long?>("LastModifierUserId");
+
+                    b.Property<int>("MemberId");
+
+                    b.Property<string>("Notes");
+
+                    b.Property<string>("Quesion")
+                        .IsRequired();
+
+                    b.Property<int>("TopicId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MemberId");
+
+                    b.HasIndex("TopicId")
+                        .IsUnique();
+
+                    b.ToTable("Votes");
                 });
 
             modelBuilder.Entity("Majales.MultiTenancy.Tenant", b =>
@@ -1263,6 +1772,119 @@ namespace Majales.Migrations
                     b.HasOne("Majales.Authorization.Users.User", "LastModifierUser")
                         .WithMany()
                         .HasForeignKey("LastModifierUserId");
+                });
+
+            modelBuilder.Entity("Majales.Models.Attachment", b =>
+                {
+                    b.HasOne("Majales.Models.Topic", "Topic")
+                        .WithMany("Attachments")
+                        .HasForeignKey("TopicId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Majales.Models.Classification", b =>
+                {
+                    b.HasOne("Majales.Models.Value", "Value")
+                        .WithOne("Classification")
+                        .HasForeignKey("Majales.Models.Classification", "ValueId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Majales.Models.Comment", b =>
+                {
+                    b.HasOne("Majales.Models.Member", "Member")
+                        .WithMany("Comments")
+                        .HasForeignKey("MemberId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Majales.Models.Topic", "Topic")
+                        .WithMany("Comments")
+                        .HasForeignKey("TopicId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Majales.Models.Majles", b =>
+                {
+                    b.HasOne("Majales.Models.Classification", "Classification")
+                        .WithOne("Majles")
+                        .HasForeignKey("Majales.Models.Majles", "ClassificationId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Majales.Models.MajlisMembership", b =>
+                {
+                    b.HasOne("Majales.Models.Majles", "Majles")
+                        .WithMany("Membership")
+                        .HasForeignKey("MajlesId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Majales.Models.Member", "Members")
+                        .WithMany("membership")
+                        .HasForeignKey("MemberId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Majales.Models.MembershipRole", "MembershipRole")
+                        .WithOne("MajlisMembership")
+                        .HasForeignKey("Majales.Models.MajlisMembership", "RoleId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Majales.Models.Meeting", b =>
+                {
+                    b.HasOne("Majales.Models.Majles", "Majles")
+                        .WithMany("Meetings")
+                        .HasForeignKey("MajlesId");
+                });
+
+            modelBuilder.Entity("Majales.Models.MeetingAttendance", b =>
+                {
+                    b.HasOne("Majales.Models.Meeting", "Meeting")
+                        .WithOne("MeetingAttendance")
+                        .HasForeignKey("Majales.Models.MeetingAttendance", "MeetingId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Majales.Models.Member", "Member")
+                        .WithOne("MeetingAttendance")
+                        .HasForeignKey("Majales.Models.MeetingAttendance", "Memberid")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Majales.Models.MeetingMinutes", b =>
+                {
+                    b.HasOne("Majales.Models.Member", "Member")
+                        .WithMany("meeting_Minutes")
+                        .HasForeignKey("MemberId");
+
+                    b.HasOne("Majales.Models.Topic", "Topic")
+                        .WithMany()
+                        .HasForeignKey("TopicId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Majales.Models.Topic", b =>
+                {
+                    b.HasOne("Majales.Models.TopicClassification", "TopicClassification")
+                        .WithOne("Topic")
+                        .HasForeignKey("Majales.Models.Topic", "ClassificationId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Majales.Models.Meeting", "Meeting")
+                        .WithMany("Topics")
+                        .HasForeignKey("MeetingId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Majales.Models.Vote", b =>
+                {
+                    b.HasOne("Majales.Models.Member", "Members")
+                        .WithMany("Votes")
+                        .HasForeignKey("MemberId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Majales.Models.Topic", "Topic")
+                        .WithOne("Vote")
+                        .HasForeignKey("Majales.Models.Vote", "TopicId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Majales.MultiTenancy.Tenant", b =>
