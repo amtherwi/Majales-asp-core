@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Abp.Application.Services;
 using AutoMapper;
+using Majales.Core.Models.Manager;
 using Majales.Majles.DTO;
 using Majales.Models;
 
@@ -26,18 +27,18 @@ namespace Majales.Majles
         public async Task Create(CreateMajlesInput input)
         {
             Models.Majles output = Mapper.Map<CreateMajlesInput, Models.Majles>(input);
-            await _majlesManager.create(output);
+            await _majlesManager.Create(output);
         }
 
         public void Update(UpdateMajlesInput input)
         {
             Models.Majles output = Mapper.Map<UpdateMajlesInput, Models.Majles>(input);
-            _majlesManager.update(output);
+            _majlesManager.Update(output);
         }
 
         public void Delete(DeleteMajlesInput input)
         {
-            _majlesManager.delete(input.Id);
+            _majlesManager.Delete(input.Id);
         }
 
         public GetMajlesOutput GetMajlesById(GetMajlesInput input)
