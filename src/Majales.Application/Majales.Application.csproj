@@ -13,4 +13,36 @@
   <ItemGroup>
     <ProjectReference Include="..\Majales.Core\Majales.Core.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Meeting\" />
+    <Folder Include="Meeting\DTO\" />
+    <Folder Include="Attachment\" />
+    <Folder Include="Attachment\DTO\" />
+    <Folder Include="Classification\" />
+    <Folder Include="Classification\DTO\" />
+    <Folder Include="Comment\" />
+    <Folder Include="Comment\DTO\" />
+    <Folder Include="MajlisMembership\" />
+    <Folder Include="MajlisMembership\DTO\" />
+    <Folder Include="MeetingAttendance\" />
+    <Folder Include="MeetingAttendance\DTO\" />
+    <Folder Include="Member\" />
+    <Folder Include="Member\DTO\" />
+    <Folder Include="MembershipRole\" />
+    <Folder Include="MembershipRole\DTO\" />
+    <Folder Include="Topic\" />
+    <Folder Include="Topic\DTO\" />
+    <Folder Include="TopicClassification\" />
+    <Folder Include="TopicClassification\DTO\" />
+    <Folder Include="Value\" />
+    <Folder Include="Value\DTO\" />
+    <Folder Include="Vote\" />
+    <Folder Include="Vote\DTO\" />
+    <Folder Include="MeetingMinutes\" />
+    <Folder Include="MeetingMinutes\DTO\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Classification\DTO\EmptyClass.cs" />
+    <Compile Remove="Topic\DTO\GetMeetingOutput.cs" />
+  </ItemGroup>
 </Project>

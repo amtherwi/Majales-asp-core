@@ -9,7 +9,7 @@ namespace Majales.Models
     {
         // [Key]
         // public int id { get; set; }
-        public string comment { get; set; }
+        public string CommentText { get; set; }
 
         [ForeignKey("Topic")]
         public int TopicId { get; set; }

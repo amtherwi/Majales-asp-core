@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Majales.Migrations
 {
     [DbContext(typeof(MajalesDbContext))]
-    [Migration("20190902203420_addingModels1")]
-    partial class addingModels1
+    [Migration("20190905231145_addingModels")]
+    partial class addingModels
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -1351,8 +1351,6 @@ namespace Majales.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<bool>("ActiveStatus");
-
                     b.Property<string>("Avatar");
 
                     b.Property<string>("College");
@@ -1369,10 +1367,6 @@ namespace Majales.Migrations
 
                     b.Property<string>("Department");
 
-                    b.Property<string>("Email");
-
-                    b.Property<DateTime>("EnrolledDate");
-
                     b.Property<bool>("IsDeleted");
 
                     b.Property<string>("JobTitle");
@@ -1381,13 +1375,14 @@ namespace Majales.Migrations
 
                     b.Property<long?>("LastModifierUserId");
 
-                    b.Property<string>("Name");
-
                     b.Property<string>("NationalId");
 
-                    b.Property<string>("Phone");
+                    b.Property<long>("UserId");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("UserId")
+                        .IsUnique();
 
                     b.ToTable("Members");
                 });
@@ -1860,6 +1855,14 @@ namespace Majales.Migrations
                     b.HasOne("Majales.Models.Topic", "Topic")
                         .WithMany()
                         .HasForeignKey("TopicId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Majales.Models.Member", b =>
+                {
+                    b.HasOne("Majales.Authorization.Users.User", "User")
+                        .WithOne("Member")
+                        .HasForeignKey("Majales.Models.Member", "UserId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
