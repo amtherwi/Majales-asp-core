@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Majales.Migrations
 {
-    public partial class addingModels1 : Migration
+    public partial class addingModels2 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -31,11 +31,18 @@ namespace Majales.Migrations
                     College = table.Column<string>(nullable: true),
                     Department = table.Column<string>(nullable: true),
                     EnrolledDate = table.Column<DateTime>(nullable: false),
-                    ActiveStatus = table.Column<bool>(nullable: false)
+                    ActiveStatus = table.Column<bool>(nullable: false),
+                    UserId = table.Column<long>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Members", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Members_AbpUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AbpUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -512,6 +519,12 @@ namespace Majales.Migrations
                 name: "IX_Meetings_MajlesId",
                 table: "Meetings",
                 column: "MajlesId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Members_UserId",
+                table: "Members",
+                column: "UserId",
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_Topics_ClassificationId",

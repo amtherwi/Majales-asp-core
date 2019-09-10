@@ -7,11 +7,7 @@ namespace Majales.Models
 {
     public class Value : FullAuditedEntity
     {
-        // [Key]
-        // public int id { get; set; }
 
-        // [ForeignKey("Classification")] 
-        // public int CalssificationId { get; set; }
         public virtual Classification Classification { get; set; }
 
         public int CEO_inCost { get; set; }

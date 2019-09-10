@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using Abp.Authorization.Users;
 using Abp.Extensions;
+using Majales.Models;
 
 namespace Majales.Authorization.Users
 {
     public class User : AbpUser<User>
     {
         public const string DefaultPassword = "123qwe";
+
+        public virtual Member Member { get; set; }
 
         public static string CreateRandomPassword()
         {

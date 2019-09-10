@@ -17,8 +17,5 @@ namespace Majales.Models
 
         public virtual Majles Majles { get; set; }
 
-        public Classification()
-        {
-        }
     }
 }

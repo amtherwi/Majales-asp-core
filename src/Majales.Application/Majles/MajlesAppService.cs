@@ -9,7 +9,7 @@ using Majales.Models;
 
 namespace Majales.Majles
 {
-    public class MajlesAppService:ApplicationService,IMajlesAppService
+    public class MajlesAppService : ApplicationService,IMajlesAppService
     {
         private readonly IMajlesManager _majlesManager;
 

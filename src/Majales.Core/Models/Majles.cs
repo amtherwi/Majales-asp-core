@@ -23,16 +23,15 @@ namespace Majales.Models
         [Required]
         public string Owner { get; set; }
 
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString="{0:yyyy-MM-dd}", ApplyFormatInEditMode=true)]
-        public DateTime CreationDate { get; set; }  
+        //[DataType(DataType.Date)]
+        //[DisplayFormat(DataFormatString="{0:yyyy-MM-dd}", ApplyFormatInEditMode=true)]
+        //public DateTime CreationDate { get; set; }  
 
         
         [ForeignKey("Classification")]
         public int ClassificationId { get; set; }
         public virtual Classification Classification { get; set; }
-
-          
+      
         [Required]
         public bool ActiveStatus { get; set; }
         
