@@ -34,8 +34,6 @@
     <Folder Include="Topic\DTO\" />
     <Folder Include="TopicClassification\" />
     <Folder Include="TopicClassification\DTO\" />
-    <Folder Include="Value\" />
-    <Folder Include="Value\DTO\" />
     <Folder Include="Vote\" />
     <Folder Include="Vote\DTO\" />
     <Folder Include="MeetingMinutes\" />

@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Majales.Migrations
 {
     [DbContext(typeof(MajalesDbContext))]
-    [Migration("20190905231145_addingModels")]
+    [Migration("20190910202521_addingModels")]
     partial class addingModels
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -1078,6 +1078,10 @@ namespace Majales.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("CEO_inCost");
+
+                    b.Property<int>("CEO_outCost");
+
                     b.Property<DateTime>("CreationTime");
 
                     b.Property<long?>("CreatorUserId");
@@ -1092,13 +1096,23 @@ namespace Majales.Migrations
 
                     b.Property<long?>("LastModifierUserId");
 
-                    b.Property<string>("Type");
+                    b.Property<int>("MSec_inCost");
 
-                    b.Property<int>("ValueId");
+                    b.Property<int>("MSec_outCost");
+
+                    b.Property<int>("MajlesTypeId");
+
+                    b.Property<int>("Mem_inCost");
+
+                    b.Property<int>("Mem_outCost");
+
+                    b.Property<int>("Sec_inCost");
+
+                    b.Property<int>("Sec_outCost");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ValueId")
+                    b.HasIndex("MajlesTypeId")
                         .IsUnique();
 
                     b.ToTable("Classifications");
@@ -1109,6 +1123,8 @@ namespace Majales.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CommentText");
 
                     b.Property<DateTime>("CreationTime");
 
@@ -1128,8 +1144,6 @@ namespace Majales.Migrations
 
                     b.Property<int>("TopicId");
 
-                    b.Property<string>("comment");
-
                     b.HasKey("Id");
 
                     b.HasIndex("MemberId");
@@ -1148,8 +1162,6 @@ namespace Majales.Migrations
                     b.Property<bool>("ActiveStatus");
 
                     b.Property<int>("ClassificationId");
-
-                    b.Property<DateTime>("CreationDate");
 
                     b.Property<DateTime>("CreationTime");
 
@@ -1177,10 +1189,36 @@ namespace Majales.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ClassificationId")
-                        .IsUnique();
+                    b.HasIndex("ClassificationId");
 
                     b.ToTable("Majles");
+                });
+
+            modelBuilder.Entity("Majales.Models.MajlesTypes", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreationTime");
+
+                    b.Property<long?>("CreatorUserId");
+
+                    b.Property<long?>("DeleterUserId");
+
+                    b.Property<DateTime?>("DeletionTime");
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<DateTime?>("LastModificationTime");
+
+                    b.Property<long?>("LastModifierUserId");
+
+                    b.Property<string>("Type");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MajlesTypes");
                 });
 
             modelBuilder.Entity("Majales.Models.MajlisMembership", b =>
@@ -1489,47 +1527,6 @@ namespace Majales.Migrations
                     b.ToTable("TopicClassifications");
                 });
 
-            modelBuilder.Entity("Majales.Models.Value", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("CEO_inCost");
-
-                    b.Property<int>("CEO_outCost");
-
-                    b.Property<DateTime>("CreationTime");
-
-                    b.Property<long?>("CreatorUserId");
-
-                    b.Property<long?>("DeleterUserId");
-
-                    b.Property<DateTime?>("DeletionTime");
-
-                    b.Property<bool>("IsDeleted");
-
-                    b.Property<DateTime?>("LastModificationTime");
-
-                    b.Property<long?>("LastModifierUserId");
-
-                    b.Property<int>("MSec_inCost");
-
-                    b.Property<int>("MSec_outCost");
-
-                    b.Property<int>("Mem_inCost");
-
-                    b.Property<int>("Mem_outCost");
-
-                    b.Property<int>("Sec_inCost");
-
-                    b.Property<int>("Sec_outCost");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Values");
-                });
-
             modelBuilder.Entity("Majales.Models.Vote", b =>
                 {
                     b.Property<int>("Id")
@@ -1781,9 +1778,9 @@ namespace Majales.Migrations
 
             modelBuilder.Entity("Majales.Models.Classification", b =>
                 {
-                    b.HasOne("Majales.Models.Value", "Value")
+                    b.HasOne("Majales.Models.MajlesTypes", "MajlesTypes")
                         .WithOne("Classification")
-                        .HasForeignKey("Majales.Models.Classification", "ValueId")
+                        .HasForeignKey("Majales.Models.Classification", "MajlesTypeId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
@@ -1803,8 +1800,8 @@ namespace Majales.Migrations
             modelBuilder.Entity("Majales.Models.Majles", b =>
                 {
                     b.HasOne("Majales.Models.Classification", "Classification")
-                        .WithOne("Majles")
-                        .HasForeignKey("Majales.Models.Majles", "ClassificationId")
+                        .WithMany()
+                        .HasForeignKey("ClassificationId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

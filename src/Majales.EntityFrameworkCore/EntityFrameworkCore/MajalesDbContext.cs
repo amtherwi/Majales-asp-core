@@ -24,7 +24,7 @@ namespace Majales.EntityFrameworkCore
         public DbSet<Attachment> Attachments {get; set;}
         public DbSet<Member> Members { get; set; }
         public DbSet<MeetingAttendance> Attendances { get; set; }
-        public DbSet<Value> Values { get; set; }
+        public DbSet<MajlesTypes> MajlesTypes { get; set; }
         public DbSet<TopicClassification> TopicClassifications { get; set; }
         public DbSet<Classification> Classifications { get; set; }
 
