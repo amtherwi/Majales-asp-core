@@ -6,12 +6,13 @@ using Majales.Classification.DTO;
 
 namespace Majales.Classification
 {
-    public interface IClassificationAppService: IApplicationService
+    public interface IClassificationAppService : IApplicationService
     {
         IEnumerable<GetClassificationOutput> ListAll();
         Task Create(CreateClassificationInput input);
         void Update(UpdateClassificationInput input);
         void Delete(DeleteClassificationInput input);
         GetClassificationOutput GetClassificationById(GetClassificationInput input);
+
     }
 }

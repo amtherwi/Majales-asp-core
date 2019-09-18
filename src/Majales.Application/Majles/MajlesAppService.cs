@@ -24,6 +24,13 @@ namespace Majales.Majles
             return output;
         }
 
+        public GetMajlesOutput GetMajlesById(GetMajlesInput input)
+        {
+            var getMajles = _majlesManager.GetMajlesByID(input.Id);
+            GetMajlesOutput output = Mapper.Map<Models.Majles, GetMajlesOutput>(getMajles);
+            return output;
+        }
+
         public async Task Create(CreateMajlesInput input)
         {
             Models.Majles output = Mapper.Map<CreateMajlesInput, Models.Majles>(input);
@@ -41,11 +48,6 @@ namespace Majales.Majles
             _majlesManager.Delete(input.Id);
         }
 
-        public GetMajlesOutput GetMajlesById(GetMajlesInput input)
-        {
-            var getMajles = _majlesManager.GetMajlesByID(input.Id);
-            GetMajlesOutput output = Mapper.Map<Models.Majles, GetMajlesOutput>(getMajles);
-            return output;
-        }
+    
     }
 }
