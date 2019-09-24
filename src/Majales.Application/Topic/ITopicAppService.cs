@@ -8,7 +8,7 @@ namespace Majales.Topic
 {
 	public interface ITopicAppService : IApplicationService
     {
-        IEnumerable<GetTopicOutput> ListAll();
+        IEnumerable<GetTopicOutput> GetAll();
         Task Create(CreateTopicInput input);
         void Update(UpdateTopicInput input);
         void Delete(DeleteTopicInput input);

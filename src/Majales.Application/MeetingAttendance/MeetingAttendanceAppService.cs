@@ -18,7 +18,7 @@ namespace Majales.MeetingAttendance
             _meetingAttendancManager = meetingAttendancManager;
         }
 
-        public IEnumerable<GetMeetingAttendanceOutput> ListAll()
+        public IEnumerable<GetMeetingAttendanceOutput> GetAll()
         {
             var getAll = _meetingAttendancManager.GetAllList().ToList();
             List<GetMeetingAttendanceOutput> output = Mapper.Map<List<Models.MeetingAttendance>, List<GetMeetingAttendanceOutput>>(getAll);

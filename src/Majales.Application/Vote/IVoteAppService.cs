@@ -8,7 +8,7 @@ namespace Majales.Vote
 {
     public interface IVoteAppService : IApplicationService
     {
-        IEnumerable<GetVoteOutput> ListAll();
+        IEnumerable<GetVoteOutput> GetAll();
         Task Create(CreateVoteInput input);
         void Update(UpdateVoteInput input);
         void Delete(DeleteVoteInput input);

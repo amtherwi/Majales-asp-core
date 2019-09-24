@@ -8,7 +8,7 @@ namespace Majales.TopicClassification
 {
     public interface ITopicClassificationAppService : IApplicationService 
     {
-        IEnumerable<GetTopicClassificationOutput> ListAll();
+        IEnumerable<GetTopicClassificationOutput> GetAll();
         Task Create(CreateTopicClassificationInput input);
         void Update(UpdateTopicClassificationInput input);
         void Delete(DeleteTopicClassificationInput input);

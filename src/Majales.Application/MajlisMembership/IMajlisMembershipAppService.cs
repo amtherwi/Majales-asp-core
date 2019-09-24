@@ -8,7 +8,7 @@ namespace Majales.MajlisMembership
 {
     public interface IMajlisMembershipAppService: IApplicationService
     {
-        IEnumerable<GetMajlisMembershipOutput> ListAll();
+        IEnumerable<GetMajlisMembershipOutput> GetAll();
         Task Create(CreateMajlisMembershipInput input);
         void Update(UpdateMajlisMembershipInput input);
         void Delete(DeleteMajlisMembershipInput input);

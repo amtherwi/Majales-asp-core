@@ -8,7 +8,7 @@ namespace Majales.MeetingAttendance
 {
     public interface IMeetingAttendanceAppService: IApplicationService
     {
-        IEnumerable<GetMeetingAttendanceOutput> ListAll();
+        IEnumerable<GetMeetingAttendanceOutput> GetAll();
         Task Create(CreateMeetingAttendanceInput input);
         void Update(UpdateMeetingAttendanceInput input);
         void Delete(DeleteMeetingAttendanceInput input);

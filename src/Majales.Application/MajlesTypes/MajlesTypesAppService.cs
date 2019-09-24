@@ -39,7 +39,7 @@ namespace Majales.MajlesTypes
             return output;
         }
 
-        public IEnumerable<GetMajlesTypesOutput> ListAll()
+        public IEnumerable<GetMajlesTypesOutput> GetAll()
         {
             var getAll = _MajlesTypesManager.GetAllList().ToList();
             List<GetMajlesTypesOutput> output = Mapper.Map<List<Models.MajlesTypes>, List<GetMajlesTypesOutput>>(getAll);

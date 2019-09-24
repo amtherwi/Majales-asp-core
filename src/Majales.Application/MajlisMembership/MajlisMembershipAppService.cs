@@ -17,7 +17,7 @@ namespace Majales.MajlisMembership
         {
             _majlisMembershipManager = majlisMembershipManager;
         }
-        public IEnumerable<GetMajlisMembershipOutput> ListAll()
+        public IEnumerable<GetMajlisMembershipOutput> GetAll()
         {
             var getAll = _majlisMembershipManager.GetAllList().ToList();
             List<GetMajlisMembershipOutput> output = Mapper.Map<List<Models.MajlisMembership>, List<GetMajlisMembershipOutput>>(getAll);

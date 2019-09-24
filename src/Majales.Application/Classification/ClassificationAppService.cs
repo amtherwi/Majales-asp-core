@@ -17,7 +17,7 @@ namespace Majales.Classification
         {
             _ClassificationManager = ClassificationManager;
         }
-        public IEnumerable<GetClassificationOutput> ListAll()
+        public IEnumerable<GetClassificationOutput> GetAll()
         {
             var getAll = _ClassificationManager.GetAllList().ToList();
             List<GetClassificationOutput> output = Mapper.Map<List<Models.Classification>, List<GetClassificationOutput>>(getAll);

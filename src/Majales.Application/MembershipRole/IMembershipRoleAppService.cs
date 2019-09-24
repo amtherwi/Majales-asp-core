@@ -8,7 +8,7 @@ namespace Majales.MembershipRole
 {
     public interface IMembershipRoleAppService: IApplicationService
     {
-        IEnumerable<GetMembershipRoleOutput> ListAll();
+        IEnumerable<GetMembershipRoleOutput> GetAll();
         Task Create(CreateMembershipRoleInput input);
         void Update(UpdateMembershipRoleInput input);
         void Delete(DeleteMembershipRoleInput input);

@@ -17,7 +17,7 @@ namespace Majales.MeetingMinutes
         {
             _meetingMinutesManager = meetingMinutesManager;
         }
-        public IEnumerable<GetMeetingMinutesOutput> ListAll()
+        public IEnumerable<GetMeetingMinutesOutput> GetAll()
         {
             var getAll = _meetingMinutesManager.GetAllList().ToList();
             List<GetMeetingMinutesOutput> output = Mapper.Map<List<Models.MeetingMinutes>, List<GetMeetingMinutesOutput>>(getAll);

@@ -8,7 +8,7 @@ namespace Majales.Attachment
 {
     public interface IAttachmentAppService : IApplicationService
     {
-        IEnumerable<GetAttachmentOutput> ListAll();
+        IEnumerable<GetAttachmentOutput> GetAll();
         Task Create(CreateAttachmentInput input);
         void Update(UpdateAttachmentInput input);
         void Delete(DeleteAttachmentInput input);

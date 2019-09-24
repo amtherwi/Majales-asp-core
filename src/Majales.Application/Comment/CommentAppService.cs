@@ -35,7 +35,7 @@ namespace Majales.Comment
             return output;
         }
 
-        public IEnumerable<GetCommentOutput> ListAll()
+        public IEnumerable<GetCommentOutput> GetAll()
         {
             var getAll = _commentManager.GetAllList().ToList();
             List<GetCommentOutput> output = Mapper.Map<List<Models.Comment>, List<GetCommentOutput>>(getAll);

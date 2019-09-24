@@ -8,7 +8,7 @@ namespace Majales.MeetingMinutes
 {
     public interface IMeetingMinutesAppService : IApplicationService
     {
-        IEnumerable<GetMeetingMinutesOutput> ListAll();
+        IEnumerable<GetMeetingMinutesOutput> GetAll();
         Task Create(CreateMeetingMinutesInput input);
         void Update(UpdateMeetingMinutesInput input);
         void Delete(DeleteMeetingMinutesInput input);

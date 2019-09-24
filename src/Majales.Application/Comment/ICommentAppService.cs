@@ -8,7 +8,7 @@ namespace Majales.Comment
 {
     public interface ICommentAppService:IApplicationService
     {
-        IEnumerable<GetCommentOutput> ListAll();
+        IEnumerable<GetCommentOutput> GetAll();
         GetCommentOutput GetCommentById(GetCommentInput input);
         Task Create(CreateCommentInput input);
         void Update(UpdateCommentInput input);

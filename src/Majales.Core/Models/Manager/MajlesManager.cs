@@ -43,6 +43,7 @@ namespace Majales.Core.Models.Manager
 
         public IEnumerable<Majles> GetAllList()
         {
+            
             return _repositoryMajles.GetAll();
         }
 
