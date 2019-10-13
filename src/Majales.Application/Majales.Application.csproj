@@ -42,5 +42,6 @@
   <ItemGroup>
     <Compile Remove="Classification\DTO\EmptyClass.cs" />
     <Compile Remove="Topic\DTO\GetMeetingOutput.cs" />
+    <Compile Remove="Majles\DTO\MajlesDto.cs" />
   </ItemGroup>
 </Project>

@@ -12,7 +12,7 @@ namespace Majales.Models
 
         [ForeignKey("MajlesTypes")] 
         public int MajlesTypeId { get; set; }
-        public virtual MajlesTypes MajlesTypes { get; set; }
+        public virtual MajlesType MajlesType { get; set; }
 
         public int CEO_inCost { get; set; }
         public int CEO_outCost { get; set; }

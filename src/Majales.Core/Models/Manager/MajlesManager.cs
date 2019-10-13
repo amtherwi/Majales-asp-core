@@ -45,11 +45,11 @@ namespace Majales.Core.Models.Manager
 
         public IEnumerable<Majles> GetAllList()
         {
-            
+
             return _repositoryMajles
                   .GetAll()
-                  .Include( type => type.Classification)
-                  .ToList();
+                .Include(type => type.Classification);
+                  //.ToList();
                   
         }
 

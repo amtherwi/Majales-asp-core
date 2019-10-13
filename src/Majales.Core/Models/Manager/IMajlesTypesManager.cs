@@ -5,13 +5,13 @@ using Majales.Models;
 
 namespace Majales.Core.Models.Manager
 {
-    public interface IMajlesTypesManager : IDomainService
+    public interface IMajlesTypeManager : IDomainService
     {
 
-        IEnumerable<MajlesTypes> GetAllList();
-        MajlesTypes GetMajlesTypesByID(int id);
-        Task<MajlesTypes> Create(MajlesTypes entity);
-        void Update(MajlesTypes entity);
+        IEnumerable<MajlesType> GetAllList();
+        MajlesType GetMajlesTypeByID(int id);
+        Task<MajlesType> Create(MajlesType entity);
+        void Update(MajlesType entity);
         void Delete(int id);
       
     }

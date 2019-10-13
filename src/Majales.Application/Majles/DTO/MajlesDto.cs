@@ -9,7 +9,7 @@ namespace Majales.Majles.DTO
         public string Title { get; set; }
         public string Description { get; set; }
         public string Owner { get; set; }
-        public int ClassificationId { get; set; }
+        public Models.Classification Classification { get; set; }
         public bool ActiveStatus { get; set; }
         //public DateTime CreationTime { get; set; }
         

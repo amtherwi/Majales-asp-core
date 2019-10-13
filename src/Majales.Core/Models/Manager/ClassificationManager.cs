@@ -1,9 +1,11 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Abp.Domain.Repositories;
 using Abp.Domain.Services;
 using Abp.UI;
 using Majales.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Majales.Core.Models.Manager
 {
@@ -40,9 +42,13 @@ namespace Majales.Core.Models.Manager
             
         }
 
-        public IEnumerable<Classification> GetAllList()
+        public  IEnumerable<Classification> GetAllList()
         {
-            return _repositoryClassification.GetAll();
+            return _repositoryClassification
+                .GetAll();
+                //.Include(x => x.MajlesType);
+                //.ToList();
+
         }
 
         public Classification GetClassificationByID(int id)
