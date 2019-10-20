@@ -22,22 +22,18 @@ namespace Majales.Models
 
         [Required]
         public string Owner { get; set; }
-
-        //[DataType(DataType.Date)]
-        //[DisplayFormat(DataFormatString="{0:yyyy-MM-dd}", ApplyFormatInEditMode=true)]
-        //public DateTime CreationDate { get; set; }  
-
         
-        [ForeignKey("Classification")]
-        public int ClassificationId { get; set; }
-        public virtual Classification Classification { get; set; }
-      
+        [ForeignKey("MajlesType")]
+        public int MajlesTypeId { get; set; }
+        public virtual MajlesType MajlesType { get; set; }
+        
         [Required]
         public bool ActiveStatus { get; set; }
         
         public virtual ICollection<Meeting> Meetings { get; set; }
 
         public virtual ICollection<MajlisMembership> Membership{get; set;} 
+
         public Majles(){
             
             Meetings = new Collection<Meeting>();

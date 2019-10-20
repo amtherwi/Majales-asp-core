@@ -13,6 +13,8 @@ namespace Majales.Classification
         void Update(UpdateClassificationInput input);
         void Delete(DeleteClassificationInput input);
         GetClassificationOutput GetClassificationById(GetClassificationInput input);
+       GetClassificationOutput GetClassificationByMajlieTypeId(GetClassificationInput input);
+
 
     }
 }

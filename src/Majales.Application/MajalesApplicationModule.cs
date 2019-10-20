@@ -49,6 +49,7 @@ namespace Majales
                 config.CreateMap<Models.Classification, GetClassificationOutput>().ReverseMap();
                 config.CreateMap<UpdateClassificationInput, Models.Meeting>().ReverseMap();
                 config.CreateMap<Models.Classification, GetClassificationOutput>().ReverseMap();
+                config.CreateMap<Models.Classification, GetClassificationOutput>().ReverseMap();
                 #endregion
 
                 #region Models.Attachment

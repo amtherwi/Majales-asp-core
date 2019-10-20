@@ -29,7 +29,7 @@ namespace Majales.EntityFrameworkCore
         public DbSet<Topic> Topics { get; set; }
         public DbSet<Vote> Votes { get; set; }
         public DbSet<Comment> Comments { get; set; }
-        public DbSet<MeetingMinutes> meeting_Minutes { get; set; }
+        public DbSet<MeetingMinutes> MeetingMinutes { get; set; }
         public DbSet<Attachment> Attachments {get; set;}
         public DbSet<Member> Members { get; set; }
         public DbSet<MeetingAttendance> Attendances { get; set; }

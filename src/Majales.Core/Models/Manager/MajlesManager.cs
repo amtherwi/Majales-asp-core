@@ -46,16 +46,17 @@ namespace Majales.Core.Models.Manager
         public IEnumerable<Majles> GetAllList()
         {
 
-            return _repositoryMajles
-                  .GetAll()
-                .Include(type => type.Classification);
+            return _repositoryMajles.GetAllIncluding(x => x.MajlesType);
+                  //.GetAll()
+                  //.Include(type => type.MajlesType)
                   //.ToList();
                   
         }
 
         public Majles GetMajlesByID(int id)
         {
-            return _repositoryMajles.Get(id);
+            IEnumerable<Majles> majales = _repositoryMajles.GetAllIncluding(x => x.MajlesType);
+            return majales.First(c => c.Id == id);
         }
 
         public void Update(Majles entity)

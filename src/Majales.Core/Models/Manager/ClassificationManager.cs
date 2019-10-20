@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -44,16 +45,43 @@ namespace Majales.Core.Models.Manager
 
         public  IEnumerable<Classification> GetAllList()
         {
-            return _repositoryClassification
-                .GetAll();
-                //.Include(x => x.MajlesType);
+            return _repositoryClassification.GetAllIncluding(x => x.MajlesType);
+              //  .GetAll()
+              //  .Include(x => x.MajlesType);
                 //.ToList();
 
         }
 
         public Classification GetClassificationByID(int id)
         {
-            return _repositoryClassification.Get(id);
+   
+            var classification = _repositoryClassification.GetAllIncluding(x => x.MajlesType).FirstOrDefault(c => c.Id == id);
+            if(classification == null)
+            {
+                throw new UserFriendlyException("No Data Found");
+            }
+            else{
+                return classification;
+
+            }
+
+
+
+            //return _repositoryClassification.Get(id);
+        }
+
+        public Classification GetClassificationByMajlesTypeID(int id)
+        {
+
+            var classification = _repositoryClassification.GetAllIncluding(x => x.MajlesType).FirstOrDefault(c => c.MajlesTypeId == id);
+            if(classification == null)
+            {
+                throw new UserFriendlyException("No Data Found");
+            }
+            else{
+                return classification;//classifications.FirstOrDefault(c => c.MajlesTypeId == id);
+            }
+
         }
 
         public void Update(Classification entity)

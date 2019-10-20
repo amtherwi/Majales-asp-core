@@ -10,6 +10,7 @@ namespace Majales.Core.Models.Manager
 
         IEnumerable<Classification> GetAllList();
         Classification GetClassificationByID(int id);
+        Classification GetClassificationByMajlesTypeID(int id);
         Task<Classification> Create(Classification entity);
         void Update(Classification entity);
         void Delete(int id);
