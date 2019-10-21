@@ -16,6 +16,7 @@ using Majales.Configuration;
 using Majales.Identity;
 
 using Abp.AspNetCore.SignalR.Hubs;
+using Newtonsoft.Json;
 
 namespace Majales.Web.Host.Startup
 {
@@ -36,6 +37,11 @@ namespace Majales.Web.Host.Startup
             services.AddMvc(
                 options => options.Filters.Add(new CorsAuthorizationFilterFactory(_defaultCorsPolicyName))
             );
+
+            services.AddMvc().AddJsonOptions(options => {
+                options.SerializerSettings.ReferenceLoopHandling
+                  = ReferenceLoopHandling.Ignore;
+            });
 
             IdentityRegistrar.Register(services);
             AuthConfigurer.Configure(services, _appConfiguration);

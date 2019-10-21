@@ -17,7 +17,7 @@ namespace Majales.Topic
         {
             _topicManager = topicManager;
         }
-        public IEnumerable<GetTopicOutput> ListAll()
+        public IEnumerable<GetTopicOutput> GetAll()
         {
             var getAll = _topicManager.GetAllList().ToList();
             List<GetTopicOutput> output = Mapper.Map<List<Models.Topic>, List<GetTopicOutput>>(getAll);

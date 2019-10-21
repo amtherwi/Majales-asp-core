@@ -17,7 +17,7 @@ namespace Majales.Vote
         {
             _voteManager = voteManager;
         }
-        public IEnumerable<GetVoteOutput> ListAll()
+        public IEnumerable<GetVoteOutput> GetAll()
         {
             var getAll = _voteManager.GetAllList().ToList();
             List<GetVoteOutput> output = Mapper.Map<List<Models.Vote>, List<GetVoteOutput>>(getAll);

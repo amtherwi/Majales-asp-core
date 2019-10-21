@@ -18,7 +18,7 @@ namespace Majales.Attachment
             _attachmentManager = attachmentManager;
         }
 
-        public IEnumerable<GetAttachmentOutput> ListAll()
+        public IEnumerable<GetAttachmentOutput> GetAll()
         {
             var getAll = _attachmentManager.GetAllList().ToList();
             List<GetAttachmentOutput> output = Mapper.Map<List<Models.Attachment>, List<GetAttachmentOutput>>(getAll);

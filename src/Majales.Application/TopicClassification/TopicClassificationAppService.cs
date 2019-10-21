@@ -17,7 +17,7 @@ namespace Majales.TopicClassification
         {
             _topicClassificationManager = membershipRoleManager;
         }
-        public IEnumerable<GetTopicClassificationOutput> ListAll()
+        public IEnumerable<GetTopicClassificationOutput> GetAll()
         {
             var getAll = _topicClassificationManager.GetAllList().ToList();
             List<GetTopicClassificationOutput> output = Mapper.Map<List<Models.TopicClassification>, List<GetTopicClassificationOutput>>(getAll);

@@ -17,7 +17,7 @@ namespace Majales.MembershipRole
         {
             _membershipRoleManager = membershipRoleManager;
         }
-        public IEnumerable<GetMembershipRoleOutput> ListAll()
+        public IEnumerable<GetMembershipRoleOutput> GetAll()
         {
             var getAll = _membershipRoleManager.GetAllList().ToList();
             List<GetMembershipRoleOutput> output = Mapper.Map<List<Models.MembershipRole>, List<GetMembershipRoleOutput>>(getAll);

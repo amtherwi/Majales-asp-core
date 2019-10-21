@@ -13,6 +13,7 @@ namespace Majales.EntityFrameworkCore
         public static void Configure(DbContextOptionsBuilder<MajalesDbContext> builder, DbConnection connection)
         {
             builder.UseSqlServer(connection);
+
         }
     }
 }

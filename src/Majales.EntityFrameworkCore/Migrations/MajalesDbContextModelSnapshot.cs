@@ -1159,8 +1159,6 @@ namespace Majales.Migrations
 
                     b.Property<bool>("ActiveStatus");
 
-                    b.Property<int>("ClassificationId");
-
                     b.Property<DateTime>("CreationTime");
 
                     b.Property<long?>("CreatorUserId");
@@ -1178,6 +1176,8 @@ namespace Majales.Migrations
 
                     b.Property<long?>("LastModifierUserId");
 
+                    b.Property<int>("MajlesTypeId");
+
                     b.Property<string>("Owner")
                         .IsRequired();
 
@@ -1187,12 +1187,13 @@ namespace Majales.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ClassificationId");
+                    b.HasIndex("MajlesTypeId")
+                        .IsUnique();
 
                     b.ToTable("Majles");
                 });
 
-            modelBuilder.Entity("Majales.Models.MajlesTypes", b =>
+            modelBuilder.Entity("Majales.Models.MajlesType", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -1378,7 +1379,7 @@ namespace Majales.Migrations
 
                     b.HasIndex("TopicId");
 
-                    b.ToTable("meeting_Minutes");
+                    b.ToTable("MeetingMinutes");
                 });
 
             modelBuilder.Entity("Majales.Models.Member", b =>
@@ -1776,7 +1777,7 @@ namespace Majales.Migrations
 
             modelBuilder.Entity("Majales.Models.Classification", b =>
                 {
-                    b.HasOne("Majales.Models.MajlesTypes", "MajlesTypes")
+                    b.HasOne("Majales.Models.MajlesType", "MajlesType")
                         .WithOne("Classification")
                         .HasForeignKey("Majales.Models.Classification", "MajlesTypeId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -1797,9 +1798,9 @@ namespace Majales.Migrations
 
             modelBuilder.Entity("Majales.Models.Majles", b =>
                 {
-                    b.HasOne("Majales.Models.Classification", "Classification")
-                        .WithMany()
-                        .HasForeignKey("ClassificationId")
+                    b.HasOne("Majales.Models.MajlesType", "MajlesType")
+                        .WithOne("Majles")
+                        .HasForeignKey("Majales.Models.Majles", "MajlesTypeId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

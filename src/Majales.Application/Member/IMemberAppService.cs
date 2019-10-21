@@ -8,7 +8,7 @@ namespace Majales.Member
 {
     public interface IMemberAppService: IApplicationService
     {
-        IEnumerable<GetMemberOutput> ListAll();
+        IEnumerable<GetMemberOutput> GetAll();
         Task Create(CreateMemberInput input);
         void Update(UpdateMemberInput input);
         void Delete(DeleteMemberInput input);

@@ -15,7 +15,7 @@ namespace Majales.Models
 
         [ForeignKey("Meeting")] 
         public int MeetingId { get; set; }
-        public Meeting Meeting { get; set; }
+        public virtual Meeting Meeting { get; set; }
         public virtual Member Member{ get; set; }
 
 

@@ -17,7 +17,7 @@ namespace Majales.Member
         {
             _memberManager = memberManager;
         }
-        public IEnumerable<GetMemberOutput> ListAll()
+        public IEnumerable<GetMemberOutput> GetAll()
         {
             var getAll = _memberManager.GetAllList().ToList();
             List<GetMemberOutput> output = Mapper.Map<List<Models.Member>, List<GetMemberOutput>>(getAll);

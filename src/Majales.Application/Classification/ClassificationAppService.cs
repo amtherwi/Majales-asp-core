@@ -17,7 +17,7 @@ namespace Majales.Classification
         {
             _ClassificationManager = ClassificationManager;
         }
-        public IEnumerable<GetClassificationOutput> ListAll()
+        public IEnumerable<GetClassificationOutput> GetAll()
         {
             var getAll = _ClassificationManager.GetAllList().ToList();
             List<GetClassificationOutput> output = Mapper.Map<List<Models.Classification>, List<GetClassificationOutput>>(getAll);
@@ -47,5 +47,12 @@ namespace Majales.Classification
             GetClassificationOutput output = Mapper.Map<Models.Classification, GetClassificationOutput>(getClassification);
             return output;
         }
+        public GetClassificationOutput GetClassificationByMajlieTypeId(GetClassificationInput input)
+        {
+            var getClassification = _ClassificationManager.GetClassificationByMajlesTypeID(input.Id);
+            GetClassificationOutput output = Mapper.Map<Models.Classification, GetClassificationOutput>(getClassification);
+            return output;
+        }
+
     }
 }

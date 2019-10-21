@@ -13,18 +13,27 @@ namespace Majales.EntityFrameworkCore
         public MajalesDbContext(DbContextOptions<MajalesDbContext> options)
             : base(options)
         {
+            
         }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    base.OnConfiguring(optionsBuilder);
+        //    optionsBuilder.UseLazyLoadingProxies();
+
+
+        //}
+
         public DbSet<Majles> Majles { get; set; }
         public DbSet<Meeting> Meetings { get; set; }
         public DbSet<MajlisMembership> MajlisMembership { get; set; }
         public DbSet<Topic> Topics { get; set; }
         public DbSet<Vote> Votes { get; set; }
         public DbSet<Comment> Comments { get; set; }
-        public DbSet<MeetingMinutes> meeting_Minutes { get; set; }
+        public DbSet<MeetingMinutes> MeetingMinutes { get; set; }
         public DbSet<Attachment> Attachments {get; set;}
         public DbSet<Member> Members { get; set; }
         public DbSet<MeetingAttendance> Attendances { get; set; }
-        public DbSet<MajlesTypes> MajlesTypes { get; set; }
+        public DbSet<MajlesType> MajlesTypes { get; set; }
         public DbSet<TopicClassification> TopicClassifications { get; set; }
         public DbSet<Classification> Classifications { get; set; }
 

@@ -8,11 +8,13 @@ namespace Majales.Classification
 {
     public interface IClassificationAppService : IApplicationService
     {
-        IEnumerable<GetClassificationOutput> ListAll();
+        IEnumerable<GetClassificationOutput> GetAll();
         Task Create(CreateClassificationInput input);
         void Update(UpdateClassificationInput input);
         void Delete(DeleteClassificationInput input);
         GetClassificationOutput GetClassificationById(GetClassificationInput input);
+       GetClassificationOutput GetClassificationByMajlieTypeId(GetClassificationInput input);
+
 
     }
 }
