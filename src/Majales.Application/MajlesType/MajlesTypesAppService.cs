@@ -46,5 +46,11 @@ namespace Majales.MajlesType
             GetMajlesTypeOutput output = Mapper.Map<Models.MajlesType, GetMajlesTypeOutput>(getMajlesType);
             return output;
         }
+        public GetMajlesTypeOutput GetMajlesTypesByType(GetMajlesTypeInput input)
+        {
+            var getMajlesType = _MajlesTypeManager.GetMajlesTypeByType(input.Type);
+            GetMajlesTypeOutput output = Mapper.Map<Models.MajlesType, GetMajlesTypeOutput>(getMajlesType);
+            return output;
+        }
     }
 }

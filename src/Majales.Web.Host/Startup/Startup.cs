@@ -60,6 +60,7 @@ namespace Majales.Web.Host.Startup
                                 .Select(o => o.RemovePostFix("/"))
                                 .ToArray()
                         )
+                        .AllowAnyOrigin()
                         .AllowAnyHeader()
                         .AllowAnyMethod()
                         .AllowCredentials()

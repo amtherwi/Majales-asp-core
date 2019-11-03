@@ -16,7 +16,7 @@ namespace Majales.Core.Models.Manager
         }
         public async Task<MajlesType> Create(MajlesType entity)
         {
-            var MajlesType = _repositoryMajlesType.FirstOrDefault(x => x.Id == entity.Id);
+            var MajlesType = _repositoryMajlesType.FirstOrDefault(x => x.Type == entity.Type);
             if(MajlesType != null){
                 throw new UserFriendlyException("Already Exist");
             
@@ -46,6 +46,18 @@ namespace Majales.Core.Models.Manager
         public MajlesType GetMajlesTypeByID(int id)
         {
             return _repositoryMajlesType.Get(id);
+        }
+        public MajlesType GetMajlesTypeByType(string type)
+        {
+            var majlesType = _repositoryMajlesType.FirstOrDefault(x => x.Type == type);
+            if( majlesType == null ) {
+
+                throw new UserFriendlyException("No Data Found");
+
+            } else{
+
+                return majlesType;
+            }       
         }
 
         public void Update(MajlesType entity)
