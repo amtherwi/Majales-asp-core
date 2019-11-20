@@ -10,6 +10,7 @@ namespace Majales.Core.Models.Manager
 
         IEnumerable<MajlesType> GetAllList();
         MajlesType GetMajlesTypeByID(int id);
+        MajlesType GetMajlesTypeByType(string type);
         Task<MajlesType> Create(MajlesType entity);
         void Update(MajlesType entity);
         void Delete(int id);

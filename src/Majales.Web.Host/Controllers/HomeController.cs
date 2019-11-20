@@ -5,9 +5,11 @@ using Abp.Extensions;
 using Abp.Notifications;
 using Abp.Timing;
 using Majales.Controllers;
+using Abp.AspNetCore.Mvc.Authorization;
 
 namespace Majales.Web.Host.Controllers
 {
+    [AbpMvcAuthorize]
     public class HomeController : MajalesControllerBase
     {
         private readonly INotificationPublisher _notificationPublisher;

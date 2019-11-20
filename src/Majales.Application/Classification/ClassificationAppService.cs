@@ -47,7 +47,7 @@ namespace Majales.Classification
             GetClassificationOutput output = Mapper.Map<Models.Classification, GetClassificationOutput>(getClassification);
             return output;
         }
-        public GetClassificationOutput GetClassificationByMajlieTypeId(GetClassificationInput input)
+        public GetClassificationOutput GetClassificationByMajlesTypeId(GetClassificationInput input)
         {
             var getClassification = _ClassificationManager.GetClassificationByMajlesTypeID(input.Id);
             GetClassificationOutput output = Mapper.Map<Models.Classification, GetClassificationOutput>(getClassification);

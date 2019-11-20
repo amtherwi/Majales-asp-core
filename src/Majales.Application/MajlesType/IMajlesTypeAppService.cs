@@ -13,5 +13,7 @@ namespace Majales.MajlesType
         void Update(UpdateMajlesTypeInput input);
         void Delete(DeleteMajlesTypeInput input);
         GetMajlesTypeOutput GetMajlesTypesById(GetMajlesTypeInput input);
+        GetMajlesTypeOutput GetMajlesTypesByType(GetMajlesTypeInput input);
+
     }
 }
