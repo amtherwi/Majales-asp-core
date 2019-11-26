@@ -6,8 +6,8 @@ namespace Majales.Classification.DTO
     {
         public int Id { get; set; }
 
-        public Models.MajlesType MajlesType { get; set; }
-
+        //public Models.MajlesType MajlesType { get; set; }
+        public int MajlesTypeId { get; set; }
         public int CEO_inCost { get; set; }
         public int CEO_outCost { get; set; }
         public int Sec_inCost { get; set; }
