@@ -20,6 +20,8 @@ namespace Majales.Models
         [Required]
         public string Description { get; set; }
 
+        public int stt { get; set; }
+
         [Required]
         public string Owner { get; set; }
         
