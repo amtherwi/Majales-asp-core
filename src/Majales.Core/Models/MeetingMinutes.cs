@@ -15,6 +15,9 @@ namespace Majales.Models
 
         [ForeignKey("Topic"), Column(Order = 1)]
         public int TopicId { get; set; }
+
+        [ForeignKey("Member")]
+        public int MemberId { get; set; }
         public string Descussion { get; set; }
         public string Decision { get; set; }
         

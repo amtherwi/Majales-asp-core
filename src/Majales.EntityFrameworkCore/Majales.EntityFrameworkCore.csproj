@@ -18,6 +18,10 @@
     <Compile Remove="Migrations\20190807165819_iniat.cs" />
     <Compile Remove="Migrations\20190807165819_iniat.Designer.cs" />
     <Compile Remove="Migrations\20190905095417_addingModels2.cs" />
+    <Compile Remove="Migrations\20200128113222_Initial2.cs" />
+    <Compile Remove="Migrations\20200128113222_Initial2.Designer.cs" />
+    <Compile Remove="Migrations\20200128113349_Initial3.cs" />
+    <Compile Remove="Migrations\20200128113349_Initial3.Designer.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.1" />

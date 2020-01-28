@@ -9,8 +9,7 @@ namespace Majales.Models
 {
     public class Topic:FullAuditedEntity
     {
-        // [Key]
-        // public int id { get; set; }
+       
 
         [Required]
         [Display(Name = "Title")]
@@ -20,29 +19,28 @@ namespace Majales.Models
         [Required]
         public string Description { get; set; }
 
+        [Required]
+        public bool ActiveStatus { get; set; }
+
         [ForeignKey("TopicClassification")] 
-        public int ClassificationId { get; set; }  
-        public virtual TopicClassification TopicClassification { get; set; }        
-      
+        public int ClassificationId { get; set; }
+        [ForeignKey("Meeting")]
+        public int MeetingId { get; set; }
         
         public virtual ICollection<Attachment> Attachments { get; set; }
 
         public virtual ICollection<Comment> Comments { get; set; }
+        public virtual ICollection<Vote> Vote { get; set; }
 
-        [ForeignKey("Meeting")]
-        public int MeetingId { get; set; }
+        public virtual TopicClassification TopicClassification { get; set; }
         public virtual Meeting  Meeting  { get; set; }
 
-        [Required]
-        public bool ActiveStatus { get; set; }
+       
 
-        public virtual Vote Vote { get; set; }
-
-        // public virtual MeetingMinutes MeetingMinutes { get; set;}
-         
         public Topic(){
             Attachments = new Collection<Attachment>();
             Comments = new Collection<Comment>();
+            Vote = new Collection<Vote>();
         }
         
     }

@@ -7,8 +7,7 @@ namespace Majales.Models
 {
     public class MajlisMembership : FullAuditedEntity
     {
-        // [Key]
-        // public int id { get; set; }
+       
 
         [ForeignKey("Majles")]
         public int MajlesId {get; set;} 
@@ -26,7 +25,7 @@ namespace Majales.Models
 
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString="{0:yyyy-MM-dd}", ApplyFormatInEditMode=true)]
-        public DateTime Date { get; set; }
+        public DateTime JoinDate { get; set; }
        
 
     }
