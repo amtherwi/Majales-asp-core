@@ -42,8 +42,13 @@ namespace Majales.Core.Models.Manager
 
         public IEnumerable<Attachment> GetAllList()
         {
-            return _repositoryAttachment.GetAllIncluding(x => x.Topic);
+            throw new System.NotImplementedException();
         }
+
+        //public IEnumerable<Attachment> GetAllList()
+        //{
+        //    return _repositoryAttachment.GetAllIncluding(x => x.Topic);
+        //}
 
         public Attachment GetAttachmentByID(int id)
         {

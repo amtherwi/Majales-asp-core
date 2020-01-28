@@ -12,21 +12,13 @@ namespace Majales.Models
 
         [ForeignKey("MajlesType")]
         public int MajlesTypeId { get; set; }
+
+        [ForeignKey("Value")]
+        public int ValueId { get; set; }
+
+        public string ClassificationType { get; set; }
+       
         public virtual MajlesType MajlesType { get; set; }
-
-        public int CEO_inCost { get; set; }
-        public int CEO_outCost { get; set; }
-
-        public int Sec_inCost { get; set; } 
-        public int Sec_outCost { get; set; }
-
-        public int MSec_inCost { get; set; }
-        public int MSec_outCost { get; set; }
-
-        public int Mem_inCost { get; set; }
-        public int Mem_outCost { get; set; }
-        
- 
-        
+        public virtual Value Value { get; set; }
     }
 }

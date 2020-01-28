@@ -28,10 +28,13 @@ namespace Majales.EntityFrameworkCore
         public DbSet<MajlisMembership> MajlisMembership { get; set; }
         public DbSet<Topic> Topics { get; set; }
         public DbSet<Vote> Votes { get; set; }
+        public DbSet<VoteTransaction> VoteTransactions { get; set; }
+        public DbSet<Value> Values { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<MeetingMinutes> MeetingMinutes { get; set; }
         public DbSet<Attachment> Attachments {get; set;}
         public DbSet<Member> Members { get; set; }
+        public DbSet<MembershipRole> MembershipRoles { get; set; }
         public DbSet<MeetingAttendance> Attendances { get; set; }
         public DbSet<MajlesType> MajlesTypes { get; set; }
         public DbSet<TopicClassification> TopicClassifications { get; set; }

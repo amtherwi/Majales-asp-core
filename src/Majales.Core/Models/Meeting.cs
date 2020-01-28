@@ -2,14 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using Abp.Domain.Entities.Auditing;
 
 namespace Majales.Models
 {
     public class Meeting:FullAuditedEntity
     {
-        // [Key]
-        // public int id { get; set; }
+       
 
         [Required]
         [Display(Name = "Title")]
@@ -19,15 +19,14 @@ namespace Majales.Models
         [Required]
         public string Description { get; set; }
 
-        [Required]
-        public int TypeId { get; set; }
+        [ForeignKey("Majles")]
+        public int MajlesId { get; set; }
 
-        [Required]
-        public int CEOid { get; set; }
+
 
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString="{0:yyyy-MM-dd}", ApplyFormatInEditMode=true)]
-        public DateTime Date { get; set; }  
+        public DateTime MeetingDate { get; set; }  
 
         [DataType(DataType.Time)]
         [DisplayFormat(DataFormatString="{0:yyyy-MM-dd}", ApplyFormatInEditMode=true)]
@@ -41,11 +40,13 @@ namespace Majales.Models
         public virtual Majles Majles { get; set; } 
  
         public virtual ICollection<Topic> Topics{get; set;} 
-        public virtual MeetingAttendance MeetingAttendance { get; set; }
+        public virtual ICollection<MeetingAttendance> MeetingAttendance { get; set; }
 
-        public Meeting(){
+        public Meeting()
+        {
             
             Topics = new Collection<Topic>();
+            MeetingAttendance=new Collection<MeetingAttendance>();
         }
 
         
