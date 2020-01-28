@@ -6,14 +6,15 @@ using Abp.Domain.Repositories;
 using Abp.Domain.Services;
 using Abp.UI;
 using Majales.Models;
+using Majales.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace Majales.Core.Models.Manager
 {
     public class MajlesManager: DomainService, IMajlesManager
     {
-        private readonly IRepository<Majles> _repositoryMajles;
-        public MajlesManager(IRepository<Majles> repositoryMajles)
+        private readonly IMajlesRepository _repositoryMajles;
+        public MajlesManager(IMajlesRepository repositoryMajles)
         {
             _repositoryMajles = repositoryMajles;
         }
