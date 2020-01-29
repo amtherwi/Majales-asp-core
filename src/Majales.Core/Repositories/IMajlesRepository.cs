@@ -8,6 +8,6 @@ namespace Majales.Repositories
 {
     public interface IMajlesRepository : IRepository<Majles,int>
     {
-        int GetMajlesQuantity(int majlesId);
+        int GetMajlesQuantity(int userid);
     }
 }
