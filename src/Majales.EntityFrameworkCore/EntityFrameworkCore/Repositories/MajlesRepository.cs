@@ -1,6 +1,8 @@
 using Abp.EntityFrameworkCore;
 using Majales.Models;
 using Majales.Repositories;
+using Majales.Core.Models.Manager;
+using System.Linq;
 
 namespace Majales.EntityFrameworkCore.Repositories
 {
@@ -12,9 +14,17 @@ namespace Majales.EntityFrameworkCore.Repositories
  
         }
 
-        public int GetMajlesQuantity(int majlesId)
+        private MajalesDbContext db  ;
+        public int GetMajlesQuantity(int userid)
         {
-            return 10;
+
+            var a = (from m in db.Members
+                    join o in db.MajlisMembership on m.UserId equals o.Id
+                    join b in db.MembershipRoles on m.UserId equals b.Id
+                    where m.UserId == userid
+                    select b).Count();
+            return a;
+
         }
     }
 }
